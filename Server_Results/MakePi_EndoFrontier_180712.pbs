@@ -1,0 +1,5 @@
+#!/bin/tcsh
+#PBS -l mem=180gb,nodes=1:ppn=32,walltime=120:00:00
+module load matlab
+cd /gsfs0/data/---/Code/step_01
+matlab -nodisplay -nodesktop -nosplash -nojvm -r MakePi_EndoFrontier_180712

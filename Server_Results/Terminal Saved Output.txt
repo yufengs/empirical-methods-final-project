@@ -1,0 +1,122 @@
+Last login: Tue May 18 01:41:39 on ttys000
+---MacBook-Pro:~ ---$ ssh -p 22022 ---@sirius.bc.edu
+---@sirius.bc.edu's password: 
+Last login: Tue May 18 01:41:43 2021 from ---
+manpath: can't set the locale; make sure $LC_* and $LANG are correct
+[---@sirius ~]$ showq | grep ---
+4038638               ---    Running     8  4:03:26:13  Mon May 17 18:29:09
+[---@sirius ~]$ qstat -f 4038638
+Job Id: 4038638.orion.cm.cluster
+    Job_Name = MakePi_EndoFrontier_180712_S.pbs
+    Job_Owner = ---@sirius.cm.cluster
+    resources_used.cput = 20:29:52
+    resources_used.energy_used = 0
+    resources_used.mem = 823504kb
+    resources_used.vmem = 2259492kb
+    resources_used.walltime = 20:32:44
+    job_state = R
+    queue = normal
+    server = orion.cm.cluster
+    Checkpoint = u
+    ctime = Mon May 17 18:29:10 2021
+    Error_Path = sirius.cm.cluster:/gsfs0/data/---/step_01/MakePi_EndoFronti
+	er_180712_S.pbs.e4038638
+    exec_host = compute125/24-31
+    Hold_Types = n
+    Join_Path = n
+    Keep_Files = n
+    Mail_Points = a
+    mtime = Mon May 17 18:29:11 2021
+    Output_Path = sirius.cm.cluster:/gsfs0/data/---/step_01/MakePi_EndoFront
+	ier_180712_S.pbs.o4038638
+    Priority = 0
+    qtime = Mon May 17 18:29:10 2021
+    Rerunable = True
+    Resource_List.mem = 128gb
+    Resource_List.nodes = 1:ppn=8
+    Resource_List.walltime = 120:00:00
+    Resource_List.nodect = 1
+    session_id = 147559
+    Variable_List = PBS_O_QUEUE=normal,PBS_O_HOME=/data/---,
+	PBS_O_LOGNAME=---,
+	PBS_O_PATH=/data/---/bin:/cm/shared/apps/torque/bin:/cm/shared/apps
+	/torque/sbin:/cm/shared/apps/moab/bin:/cm/shared/apps/moab/sbin:/usr/p
+	ublic/moaB/scripts:/cm/shared/apps/torque/6.1.1/sbin:/cm/shared/apps/t
+	orque/6.1.1/bin:/cm/local/apps/environment-modules/4.0.0//bin:/usr/loc
+	al/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/ibutils/bin:/sbin:/usr/
+	sbin:/cm/local/apps/environment-modules/4.0.0/bin:/opt/dell/srvadmin/b
+	in,PBS_O_MAIL=/var/spool/mail/---,PBS_O_SHELL=/bin/tcsh,
+	PBS_O_LANG=en_US.UTF-8,PBS_O_WORKDIR=/gsfs0/data/---/step_01,
+	PBS_O_HOST=sirius.cm.cluster,PBS_O_SERVER=master.cm.cluster
+    euser = ---
+    egroup = murryc
+    queue_type = E
+    etime = Mon May 17 18:29:10 2021
+    submit_args = MakePi_EndoFrontier_180712_S.pbs
+    start_time = Mon May 17 18:29:11 2021
+    Walltime.Remaining = 357948
+    start_count = 1
+    fault_tolerant = False
+    job_radix = 0
+    submit_host = sirius.cm.cluster
+    init_work_dir = /gsfs0/data/---/step_01
+    request_version = 1
+    req_information.task_count.0 = 1
+    req_information.lprocs.0 = 8
+    req_information.memory.0 = 134217728kb
+    req_information.thread_usage_policy.0 = allowthreads
+    req_information.hostlist.0 = compute125:ppn=8
+    req_information.task_usage.0.task.0.cpu_list = 9,11,13,15,17,19,21,23
+    req_information.task_usage.0.task.0.mem_list = 0-1
+    req_information.task_usage.0.task.0.cores = 0
+    req_information.task_usage.0.task.0.threads = 8
+    req_information.task_usage.0.task.0.host = compute125
+    cpuset_string = compute125:9,11,13,15,17,19,21,23
+    memset_string = compute125:0-1
+
+[---@sirius ~]$ checkjob -v 4038638
+job 4038638 (RM job '4038638.orion.cm.cluster')
+
+AName: MakePi_EndoFrontier_180712_S.pbs
+State: Running 
+Creds:  user:---  group:murryc  class:normal
+WallTime:   20:34:50 of 5:00:00:00
+SubmitTime: Mon May 17 18:29:09
+  (Time Queued  Total: 00:00:00  Eligible: 00:00:00)
+
+StartTime: Mon May 17 18:29:09
+TemplateSets:  DEFAULT
+Total Requested Tasks: 8
+
+Req[0]  TaskCount: 8  Partition: pbs
+Dedicated Resources Per Task: PROCS: 1  MEM: 16G
+Utilized Resources Per Task:  PROCS: 0.12  MEM: 100M  SWAP: 275M
+Avg Util Resources Per Task:  PROCS: 0.12
+Max Util Resources Per Task:  PROCS: 0.12  MEM: 100M  SWAP: 275M
+Average Utilized Memory: 96.82 MB
+Average Utilized Procs: 1.96
+TasksPerNode: 8  NodeCount:  1
+
+Allocated Nodes:
+[compute125:8]
+
+
+SystemID:   Moab
+SystemJID:  4038638
+Notification Events: JobFail
+Task Distribution: compute125,compute125,compute125,compute125,compute125,compute125,compute125,compute125
+IWD:            /gsfs0/data/---/step_01
+UMask:          0000 
+OutputFile:     sirius.cm.cluster:/gsfs0/data/---/step_01/MakePi_EndoFrontier_180712_S.pbs.o4038638
+ErrorFile:      sirius.cm.cluster:/gsfs0/data/---/step_01/MakePi_EndoFrontier_180712_S.pbs.e4038638
+StartCount:     1
+Partition List: pbs
+SrcRM:          pbs  DstRM: pbs  DstRMJID: 4038638.orion.cm.cluster
+Submit Args:    MakePi_EndoFrontier_180712_S.pbs
+Flags:          RESTARTABLE
+Attr:           checkpoint
+StartPriority:  5983
+IterationJobRank: 0
+PE:             27.76
+Reservation '4038638' (-20:34:50 -> 4:03:25:10  Duration: 5:00:00:00)
+

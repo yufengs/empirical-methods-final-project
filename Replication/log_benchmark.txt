@@ -1,0 +1,10 @@
+┌ Info:  ───────────────────────────────────────────────────────────────────
+│                             Time                   Allocations      
+│                     ──────────────────────   ───────────────────────
+│   Tot / % measured:     10630s / 100%             976GiB / 100%     
+│ 
+│  Section    ncalls     time   %tot     avg     alloc   %tot      avg
+│  ───────────────────────────────────────────────────────────────────
+│  Step 1-1        1   10620s   100%  10620s    976GiB  100%    976GiB
+│  ───────────────────────────────────────────────────────────────────
+└ @ Main /Users/---/Downloads/Empirical Methods in Applied Microeconomics/Course Paper/Supplementary Data/Code/Replication/MakePi_EndoFrontier_180712.jl:271
