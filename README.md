@@ -1,4 +1,4 @@
-# Micro-Theory-Final-Project
+# Empirical Methods Final Project
 All the Julia code and MATLAB code, as well as the log files mentioned in final report can be found here.  
   
 The original step 1 and step 2 MATLAB code provided by the authors can be found in the step_01_benchmark and step_02_benchmark folders. In the step_02_benchmark folder, there is also an error log indicating insufficient memory of our personal computer in direct execution of the MATLAB code.  
